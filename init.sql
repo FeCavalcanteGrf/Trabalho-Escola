@@ -83,36 +83,36 @@ CREATE TABLE usuario (
 );
 
 INSERT INTO professor (id_professor, nome_completo, email, telefone) VALUES 
-(1, 'João Silva', 'joao@escola.com', '123456789'),
-(2, 'Maria Santos', 'maria@escola.com', '987654321');
+(1, 'Carlos Mendes', 'carlos@escola.com', '11987654321'),
+(2, 'Fernanda Lima', 'fernanda@escola.com', '21987654321');
 
 INSERT INTO turma (id_turma, nome_turma, id_professor, horario) VALUES 
-(1, 'Turma A', 1, '08:00 - 10:00'),
-(2, 'Turma B', 2, '10:00 - 12:00');
+(1, 'Turma C', 1, '14:00 - 16:00'),
+(2, 'Turma D', 2, '16:00 - 18:00');
 
 INSERT INTO aluno (id_aluno, nome_completo, data_nascimento, id_turma, nome_responsavel, telefone_responsavel, email_responsavel, endereco, cidade, estado, cep, pais, telefone) VALUES 
-(1, 'Maria Oliveira', '2010-05-15', 1, 'Ana Oliveira', '987654321', 'ana@escola.com', 'Rua A, 123', 'São Paulo', 'SP', '12345-678', 'Brasil', '11987654321'),
-(2, 'Pedro Almeida', '2011-03-20', 1, 'Carlos Almeida', '123456789', 'carlos@escola.com', 'Rua B, 456', 'Rio de Janeiro', 'RJ', '23456-789', 'Brasil', '21987654321'),
-(3, 'Lucas Pereira', '2010-07-30', 2, 'Fernanda Pereira', '456789123', 'fernanda@escola.com', 'Rua C, 789', 'Belo Horizonte', 'MG', '34567-890', 'Brasil', '31987654321');
+(1, 'Ana Costa', '2012-01-10', 1, 'João Costa', '11912345678', 'joao@escola.com', 'Rua D, 101', 'Curitiba', 'PR', '80000-000', 'Brasil', '41987654321'),
+(2, 'Lucas Silva', '2011-11-25', 1, 'Maria Silva', '21912345678', 'maria@escola.com', 'Rua E, 202', 'Fortaleza', 'CE', '60000-000', 'Brasil', '85987654321'),
+(3, 'Mariana Oliveira', '2010-09-15', 2, 'Carlos Oliveira', '31912345678', 'carlos@escola.com', 'Rua F, 303', 'Belo Horizonte', 'MG', '30000-000', 'Brasil', '31987654321');
 
 INSERT INTO pagamento (id_pagamento, id_aluno, data_pagamento, valor_pago, forma_pagamento, referencia, status) VALUES 
-(1, 1, '2023-03-01', 200.00, 'Transferência', 'Mensalidade Março', 'Pago'),
-(2, 2, '2023-03-01', 200.00, 'Cartão de Crédito', 'Mensalidade Março', 'Pendente');
+(1, 1, '2025-04-01', 250.00, 'Pix', 'Mensalidade Abril', 'Pago'),
+(2, 2, '2025-04-01', 250.00, 'Boleto', 'Mensalidade Abril', 'Pendente');
 
 INSERT INTO presenca (id_presenca, id_aluno, data_presenca, presente) VALUES 
-(1, 1, '2023-03-01', TRUE),
-(2, 2, '2023-03-01', FALSE);
+(1, 1, '2025-04-01', TRUE),
+(2, 2, '2025-04-01', TRUE);
 
 INSERT INTO atividade (id_atividade, descricao, data_realizacao) VALUES 
-(1, 'Atividade de Matemática', '2023-03-15'),
-(2, 'Atividade de Português', '2023-03-20');
+(1, 'Atividade de Ciências', '2025-04-10'),
+(2, 'Atividade de História', '2025-04-15');
 
 INSERT INTO atividade_aluno (id_atividade, id_aluno) VALUES 
 (1, 1),
 (1, 2),
-(2, 1),
+(2, 2),
 (2, 3);
 
 INSERT INTO usuario (id_usuario, login, senha, nivel_acesso, id_professor) VALUES 
-(1, 'usuario1', 'senha_hash_1', 'professor', 1),
-(2, 'usuario2', 'senha_hash_2', 'administrador', NULL);
+(1, 'professor1', 'senha_hash_123', 'professor', 1),
+(2, 'admin1', 'senha_hash_456', 'administrador', NULL);
